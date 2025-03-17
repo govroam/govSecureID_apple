@@ -14,7 +14,7 @@ class NotificationService: UNNotificationServiceExtension {
     var contentHandler: ((UNNotificationContent) -> Void)?
     var bestAttemptContent: UNMutableNotificationContent?
     private let appGroup: String = {
-        if let appGroupUrl = Bundle.main.object(forInfoDictionaryKey: "GovAppGroup") as? String {
+        if let appGroupUrl = Bundle.main.object(forInfoDictionaryKey: "TiqrAppGroup") as? String, appGroupUrl != "" {
             return appGroupUrl
         }
         return "group.nl.govroam.govconext.govsecureid"

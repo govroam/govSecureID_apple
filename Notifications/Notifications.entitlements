@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>$(GOV_APP_GROUP)</string>
+		<string>$(TIQR_APP_GROUP)</string>
 	</array>
 </dict>
 </plist>

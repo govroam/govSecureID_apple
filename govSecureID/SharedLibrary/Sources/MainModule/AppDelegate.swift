@@ -12,7 +12,8 @@ import Tiqr
 public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
     
     private let appGroup: String = {
-        if let appGroupUrl = Bundle.main.object(forInfoDictionaryKey: "GovAppGroup") as? String {
+        if let appGroupUrl = Bundle.main.object(forInfoDictionaryKey: "TiqrAppGroup") as? String, appGroupUrl != "" {
+            print("RETURNING APP GROUP: \(appGroupUrl)")
             return appGroupUrl
         }
         return "group.nl.govroam.govconext.govsecureid"
