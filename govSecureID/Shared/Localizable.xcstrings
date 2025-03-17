@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "main_text_welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "<b>Use the %@ app on your smartphone to log in to websites easily and secure.</b><br/><br/>Enhance the security of your <strong>govConext</strong> login login. When an application requires the use of  <strong>%@</strong> please follow the instructions for activation as shown in the web browser. <br/><br/>Press <b>Scan</b> when asked."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Test"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
