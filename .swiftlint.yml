@@ -12,7 +12,6 @@ excluded:
   - fastlane
   - vendor
   - GeneratedSources
-  - knmi-shared
 
 type_name:
   excluded:
