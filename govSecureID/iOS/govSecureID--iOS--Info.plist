@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GovAppGroup</key>
+	<string>$(GOV_APP_GROUP)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>demo.tiqr.org</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>TIQREnforceChallengeHosts</key>
+	<string>$(TIQR_ENFORCE_CHALLENGE_HOSTS)</string>
+	<key>TIQREnrollmentURLScheme</key>
+	<string>$(TIQR_ENROLLMENT_URL_SCHEME)</string>
+	<key>TIQRTokenExchangeEnabled</key>
+	<false/>
+	<key>TIQRTokenExchangeURL</key>
+	<string>https://tx.tiqr.org/tokenexchange/?appId=</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>LaunchScreenImage</string>
+		<key>UIImageRespectsSafeAreaInsets</key>
+		<false/>
+	</dict>
+</dict>
+</plist>

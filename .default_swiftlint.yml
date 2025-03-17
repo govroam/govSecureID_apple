@@ -1,0 +1,82 @@
+# This file contains settings as recommended by Egeniq for linting Swift code
+#
+# For projects that have access to our GitHub, add a line at the top of the
+# local `.swiftlint.yml` file:
+#
+# parent_config: https://www.example.com/default_swiftlint.yml (TBD)
+#
+# For projects that don't have access, it is recommended to copy the file into
+# their repository and name it `.default_swiftlint.yml` and check occasionally
+# for updates. Add a line at the top of the `.swiftlint.yml` file:
+#
+# parent_config: .default_swiftlint.yml
+#
+# Add further deviations from these settings to your local `.swiftlint.yml`
+# file and/or discuss in the monthly iOS Dev Meetup if all projects would
+# benefit from it if included in the `.default_swiftlint.yml`.
+
+disabled_rules:
+  - conditional_returns_on_newline
+  - cyclomatic_complexity
+  - function_body_length
+  - function_parameter_count
+  - inclusive_language
+  - large_tuple
+  - nesting
+  - multiple_closures_with_trailing_closure
+  - trailing_whitespace
+  - type_body_length
+  - unused_closure_parameter
+  - unused_optional_binding
+
+opt_in_rules:
+  - array_init
+  - closure_end_indentation
+  - closure_spacing
+  - contains_over_first_not_nil
+  - empty_count
+  - explicit_init
+  - first_where
+  - force_cast
+  - force_try
+  - let_var_whitespace
+  - literal_expression_end_indentation
+  - multiline_parameters
+  - nimble_operator
+  - operator_usage_whitespace
+  - overridden_super_call
+  - prohibited_super_call
+  - type_name
+  - unneeded_parentheses_in_closure_argument
+
+empty_count:
+  severity: warning
+
+file_length:
+ warning: 500
+ error: 1000
+
+force_cast: 
+  severity: warning
+
+force_try:
+  severity: warning
+
+identifier_name:
+  min_length:
+    warning: 2
+  max_length:
+    warning: 60
+  validates_start_with_lowercase: error
+  excluded:
+    - x
+    - y
+    - z
+    - id
+
+line_length:
+  warning: 200
+  error: 300
+  ignores_comments: true
+
+reporter: "xcode"
