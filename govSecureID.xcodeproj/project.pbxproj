@@ -435,6 +435,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
 				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid.test;
+				TIQR_ENFORCE_CHALLENGE_HOSTS = tiqr.acc.govconext.nl;
 			};
 			name = Debug;
 		};
@@ -496,6 +497,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 6.0;
 				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid;
+				TIQR_ENFORCE_CHALLENGE_HOSTS = govsecureid.govconext.nl;
 			};
 			name = Release;
 		};
@@ -532,6 +534,11 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid.test;
+				TIQR_AUTHENTICATION_URL_PATH_PARAMETER = tiqrauth/;
+				TIQR_AUTHENTICATION_URL_SCHEME = tiqrtestauth;
+				TIQR_ENFORCE_CHALLENGE_HOSTS = tiqr.acc.govconext.nl;
+				TIQR_ENROLLMENT_URL_PATH_PARAMETER = tiqrenroll/;
+				TIQR_ENROLLMENT_URL_SCHEME = tiqrtestenroll;
 			};
 			name = Debug;
 		};
@@ -568,6 +575,11 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid;
+				TIQR_AUTHENTICATION_URL_PATH_PARAMETER = tiqrauth/;
+				TIQR_AUTHENTICATION_URL_SCHEME = tiqrauth;
+				TIQR_ENFORCE_CHALLENGE_HOSTS = govsecureid.govconext.nl;
+				TIQR_ENROLLMENT_URL_PATH_PARAMETER = tiqrenroll/;
+				TIQR_ENROLLMENT_URL_SCHEME = tiqrenroll;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
