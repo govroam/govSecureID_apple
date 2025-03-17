@@ -7,6 +7,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>org.tiqr.surfnet.auth</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>$(TIQR_AUTHENTICATION_URL_SCHEME)</string>
@@ -15,6 +17,8 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>org.tiqr.surfnet.enroll</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>$(TIQR_ENROLLMENT_URL_SCHEME)</string>
@@ -41,8 +45,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>TiqrAppGroup</key>
-	<string>$(TIQR_APP_GROUP)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSAppTransportSecurity</key>
@@ -58,20 +60,22 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>TIQREnforceChallengeHosts</key>
-	<string>$(TIQR_ENFORCE_CHALLENGE_HOSTS)</string>
 	<key>TIQRAuthenticationURLPathParameter</key>
 	<string>$(TIQR_AUTHENTICATION_URL_PATH_PARAMETER)</string>
-	<key>TIQREnrollmentURLPathParameter</key>
-	<string>$(TIQR_ENROLLMENT_URL_PATH_PARAMETER)</string>
 	<key>TIQRAuthenticationURLScheme</key>
 	<string>$(TIQR_AUTHENTICATION_URL_SCHEME)</string>
+	<key>TIQREnforceChallengeHosts</key>
+	<string>$(TIQR_ENFORCE_CHALLENGE_HOSTS)</string>
+	<key>TIQREnrollmentURLPathParameter</key>
+	<string>$(TIQR_ENROLLMENT_URL_PATH_PARAMETER)</string>
 	<key>TIQREnrollmentURLScheme</key>
 	<string>$(TIQR_ENROLLMENT_URL_SCHEME)</string>
 	<key>TIQRTokenExchangeEnabled</key>
 	<false/>
 	<key>TIQRTokenExchangeURL</key>
 	<string>https://tx.tiqr.org/tokenexchange/?appId=</string>
+	<key>TiqrAppGroup</key>
+	<string>$(TIQR_APP_GROUP)</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>
