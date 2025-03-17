@@ -21,8 +21,8 @@ public class Theme: TiqrThemeType {
     public let buttonBackgroundColor: UIColor = UIColor(resource: .govRoamOrange)
     public let secondaryButtonTintColor: UIColor = .white
     public let secondaryButtonBackgroundColor: UIColor = .black
-    public let aboutIcon: UIImage? = UIImage(resource: .goVconextLogo)
-    public let topBarIcon: UIImage? = UIImage(resource: .goVconextLogo)
-    public let bottomBarIcon: UIImage? = UIImage(resource: .goVconextLogo)
+    public let aboutIcon: UIImage? = UIImage(resource: .goVlogoNWtag)
+    public let topBarIcon: UIImage? = UIImage(resource: .goVconextContour)
+    public let bottomBarIcon: UIImage? = UIImage(resource: .goVlogo)
     
 }
