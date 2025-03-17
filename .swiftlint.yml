@@ -16,4 +16,3 @@ excluded:
 type_name:
   excluded:
     - ID
-    - SeismicWarningsAdvancedSettingsFeatureTests
