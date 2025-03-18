@@ -14,7 +14,6 @@ internal struct TiqrViewController: UIViewControllerRepresentable {
     
     func makeUIViewController(context: Context) -> some UIViewController {
         let controller: UIViewController = Tiqr.shared.startWithOptions(options: nil, theme: Theme())
-        controller.view.backgroundColor = Theme().primaryColor
         return controller
     }
     

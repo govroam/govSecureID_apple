@@ -53,6 +53,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"GovSecureID-App.swift",
+				Localizable.xcstrings,
 				Media.xcassets,
 			);
 			target = C7B6502F279ADCF600582325 /* govSecureID (iOS) */;
@@ -61,6 +62,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"GovSecureID-App.swift",
+				Localizable.xcstrings,
 			);
 			target = 736CA9792D84170800E6C6F3 /* Notifications */;
 		};

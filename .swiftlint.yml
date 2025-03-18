@@ -1,20 +1,8 @@
 parent_config: .default_swiftlint.yml
 # parent_config: https://github.com/egeniq/ios-template/raw/main/.default_swiftlint.yml
 
-# This file contains settings specific to the KNMI project
+# This file contains settings specific to the govSecureID iOS project
 disabled_rules:
   - static_over_final_class
   - non_optional_string_data_conversion
-
-excluded:
-  - Pods
-  - ruby_env # exclude fastlane helper classes
-  - fastlane
-  - vendor
-  - GeneratedSources
-  - knmi-shared
-
-type_name:
-  excluded:
-    - ID
-    - SeismicWarningsAdvancedSettingsFeatureTests
+  - identifier_name

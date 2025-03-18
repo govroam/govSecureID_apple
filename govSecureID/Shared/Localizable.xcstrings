@@ -1,0 +1,23 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "main_text_welcome" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "<b>Use the %@ app on your smartphone to log in to websites easily and secure.</b><br/><br/>Enhance the security of your <b>govConext</b> login. When an application requires the use of  <b>%@</b> please follow the instructions for activation as shown in the web browser. <br/><br/>Press <b>Scan</b> when asked."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "<b>Gebruik de %@ app op je smartphone om eenvoudig en veilig in te loggen op websites.</b><br/><br/>Verhoog de beveiliging van je login via <b>govConext</b>. Als een applicatie aangeeft dat de  <b>%@</b> app nodig is, volg dan de instructies voor activatie van de app in de web browser. <br/><br/>Kies <b>Scan</b> wanneer daarom gevraagd wordt."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
