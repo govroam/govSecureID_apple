@@ -540,7 +540,7 @@
 				TIQR_AUTHENTICATION_URL_SCHEME = tiqrtestauth;
 				TIQR_ENFORCE_CHALLENGE_HOSTS = tiqr.acc.govconext.nl;
 				TIQR_ENROLLMENT_URL_PATH_PARAMETER = tiqrenroll/;
-				TIQR_ENROLLMENT_URL_SCHEME = tiqrtestenroll;
+				TIQR_ENROLLMENT_URL_SCHEME = tiqrenroll;
 			};
 			name = Debug;
 		};
