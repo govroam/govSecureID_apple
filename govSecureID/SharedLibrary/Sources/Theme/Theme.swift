@@ -12,7 +12,7 @@ public class Theme: TiqrThemeType {
     
     public init() {}
     
-    public let primaryColor: UIColor = UIColor(resource: .govRoamOrange)
+    public let primaryColor: UIColor = UIColor(resource: .govRoamGray)
     public let headerFont: UIFont = .boldSystemFont(ofSize: 20)
     public let bodyBoldFont: UIFont = .boldSystemFont(ofSize: 16)
     public let bodyFont: UIFont = .systemFont(ofSize: 16)
