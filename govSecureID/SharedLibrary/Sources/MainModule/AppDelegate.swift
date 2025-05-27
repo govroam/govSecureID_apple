@@ -29,9 +29,7 @@ public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
     }
     
     public func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        DispatchQueue.main.async {
-            Tiqr.shared.startChallenge(challenge: url.absoluteString)
-        }
+        Tiqr.shared.startChallenge(challenge: url.absoluteString)
         return true
     }
     
@@ -49,11 +47,16 @@ public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
         Task {
             do {
                 let granted = try await UNUserNotificationCenter.current().requestAuthorization(options: authOptions)
+                print("Notification permission granted: \(granted)")
                 if granted {
-                    UIApplication.shared.registerForRemoteNotifications()
+                    await MainActor.run {
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                } else {
+                    print("User denied notification permissions.")
                 }
             } catch {
-                assertionFailure(error.localizedDescription)
+                print("Notification authorization error: \(error.localizedDescription)")
             }
         }
     }
@@ -61,21 +64,15 @@ public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
 
 @MainActor
 extension GovSecureIDAppDelegate: @preconcurrency UNUserNotificationCenterDelegate {
+    
     public func userNotificationCenter(_ center: UNUserNotificationCenter,
                                        willPresent notification: UNNotification,
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        if UIApplication.shared.applicationState == .inactive || UIApplication.shared.applicationState == .background {
-            completionHandler([.banner, .sound])
-        } else {
-            // App is already open, handle the notification
-            let userInfo = notification.request.content.userInfo
-            if let challenge = userInfo["challenge"] as? String {
-                DispatchQueue.main.async {
-                    Tiqr.shared.startChallenge(challenge: challenge)
-                }
-            }
-            completionHandler([])
+        let userInfo = notification.request.content.userInfo
+        if let challenge = userInfo["challenge"] as? String {
+            Tiqr.shared.startChallenge(challenge: challenge)
         }
+        completionHandler([.banner, .sound])
     }
     
     public func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -95,9 +92,10 @@ extension GovSecureIDAppDelegate {
     public func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Failed to register for notifications: \(error.localizedDescription)")
     }
-
+    
     public func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Tiqr.shared.registerDeviceToken(token: deviceToken)
-        print("Successfully registered for notifications")
+        let tokenString = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
+        print("Successfully registered for notifications :: Device Token: \(tokenString)")
     }
 }
