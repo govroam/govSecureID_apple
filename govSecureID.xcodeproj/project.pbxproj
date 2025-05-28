@@ -535,7 +535,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
-				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid.test;
+				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid;
 				TIQR_AUTHENTICATION_URL_PATH_PARAMETER = tiqrauth/;
 				TIQR_AUTHENTICATION_URL_SCHEME = tiqrauth;
 				TIQR_ENFORCE_CHALLENGE_HOSTS = tiqr.acc.govconext.nl;
