@@ -323,7 +323,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid.Notifications;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid.test.notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -358,7 +358,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid.Notifications;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid.notification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -516,6 +516,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "govSecureID/iOS/govSecureID--iOS--Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "govSecureID Test";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "govSecureID uses the camera to scan QR-codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Tiqr uses Face ID to login without a PIN";
@@ -527,7 +528,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.govroam.govconext.govsecureid.test;
 				PRODUCT_NAME = "govSecureID-Test";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -535,7 +536,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				TARGETED_DEVICE_FAMILY = 1;
-				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid;
+				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid.test;
 				TIQR_AUTHENTICATION_URL_PATH_PARAMETER = tiqrauth/;
 				TIQR_AUTHENTICATION_URL_SCHEME = tiqrauth;
 				TIQR_ENFORCE_CHALLENGE_HOSTS = tiqr.acc.govconext.nl;
@@ -556,7 +557,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "govSecureID/iOS/govSecureID--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = govSecureID;
+				INFOPLIST_KEY_CFBundleDisplayName = "govSecureID Test";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "govSecureID uses the camera to scan QR-codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Tiqr uses Face ID to login without a PIN";
@@ -579,7 +581,7 @@
 				TIQR_APP_GROUP = group.nl.govroam.govconext.govsecureid;
 				TIQR_AUTHENTICATION_URL_PATH_PARAMETER = tiqrauth/;
 				TIQR_AUTHENTICATION_URL_SCHEME = tiqrauth;
-				TIQR_ENFORCE_CHALLENGE_HOSTS = govsecureid.govconext.nl;
+				TIQR_ENFORCE_CHALLENGE_HOSTS = govsecureidapp.govconext.nl;
 				TIQR_ENROLLMENT_URL_PATH_PARAMETER = tiqrenroll/;
 				TIQR_ENROLLMENT_URL_SCHEME = tiqrenroll;
 				VALIDATE_PRODUCT = YES;
