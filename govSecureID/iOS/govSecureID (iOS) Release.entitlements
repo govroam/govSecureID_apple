@@ -8,5 +8,9 @@
 	<array>
 		<string>$(TIQR_APP_GROUP)</string>
 	</array>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>$(AppIdentifierPrefix)$(CFBundleIdentifier)</string>
+	</array>
 </dict>
 </plist>
