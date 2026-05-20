@@ -21,7 +21,10 @@ struct GovSecureIDApp: App {
             MainView()
                 .preferredColorScheme(.dark)
                 .onOpenURL { url in
-                    Tiqr.shared.startChallenge(challenge: url.absoluteString)
+                    Tiqr.shared.startChallenge(
+                        challenge: url.absoluteString,
+                        serviceName: nil
+                    )
                 }
         }
     }

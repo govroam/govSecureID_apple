@@ -20,23 +20,34 @@ public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
     
     public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         registerNotifications()
-        if let challenge = RecentNotifications(appGroup: appGroup).getLastNotificationChallenge() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
-                Tiqr.shared.startChallenge(challenge: challenge)
+        if let data = RecentNotifications(appGroup: appGroup).getLastNotificationData() {
+            DispatchQueue.main.asyncAfter(
+                deadline: .now() + 0.2,
+                execute: {
+                    Tiqr.shared.startChallenge(
+                        challenge: data.challenge,
+                        serviceName: nil
+                    )
             })
         }
         return true
     }
     
     public func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        Tiqr.shared.startChallenge(challenge: url.absoluteString)
+        Tiqr.shared.startChallenge(
+            challenge: url.absoluteString,
+            serviceName: nil
+        )
         return true
     }
     
     public func applicationDidBecomeActive(_ application: UIApplication) {
-        if let challenge = RecentNotifications(appGroup: appGroup).getLastNotificationChallenge() {
+        if let data = RecentNotifications(appGroup: appGroup).getLastNotificationData() {
             DispatchQueue.main.async {
-                Tiqr.shared.startChallenge(challenge: challenge)
+                Tiqr.shared.startChallenge(
+                    challenge: data.challenge,
+                    serviceName: nil
+                )
             }
         }
     }
@@ -70,7 +81,10 @@ extension GovSecureIDAppDelegate: @preconcurrency UNUserNotificationCenterDelega
                                        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         let userInfo = notification.request.content.userInfo
         if let challenge = userInfo["challenge"] as? String {
-            Tiqr.shared.startChallenge(challenge: challenge)
+            Tiqr.shared.startChallenge(
+                challenge: challenge,
+                serviceName: nil
+            )
         }
         completionHandler([.banner, .sound])
     }
@@ -81,7 +95,10 @@ extension GovSecureIDAppDelegate: @preconcurrency UNUserNotificationCenterDelega
         let userInfo = response.notification.request.content.userInfo
         if let challenge = userInfo["challenge"] as? String {
             DispatchQueue.main.async {
-                Tiqr.shared.startChallenge(challenge: challenge)
+                Tiqr.shared.startChallenge(
+                    challenge: challenge,
+                    serviceName: nil
+                )
             }
         }
     }
