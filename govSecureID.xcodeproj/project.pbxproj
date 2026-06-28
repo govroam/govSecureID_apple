@@ -516,7 +516,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "govSecureID/iOS/govSecureID--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "govSecureID Test";
+				INFOPLIST_KEY_CFBundleDisplayName = govSecureID;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "govSecureID uses the camera to scan QR-codes";
@@ -558,7 +558,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "govSecureID/iOS/govSecureID--iOS--Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "govSecureID Test";
+				INFOPLIST_KEY_CFBundleDisplayName = govSecureID;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "govSecureID uses the camera to scan QR-codes";
