@@ -15,7 +15,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/Tiqr/tiqr-app-core-ios", revision: "9ca8f15a6fdf3cd22cfd3eb09b83b243059bdb30")
+        .package(url: "https://github.com/Tiqr/tiqr-app-core-ios", revision: "97d8ca424488d00b02324715661ebc2e2fb219d9")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

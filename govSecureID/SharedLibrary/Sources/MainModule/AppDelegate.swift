@@ -28,7 +28,8 @@ public class GovSecureIDAppDelegate: NSObject, UIApplicationDelegate {
                         challenge: data.challenge,
                         serviceName: nil
                     )
-            })
+                }
+            )
         }
         return true
     }
